@@ -97,3 +97,4 @@ Without WHERE, deletes all rows
 */
 DELETE FROM employees
 WHERE first_name = 'Neha';
+

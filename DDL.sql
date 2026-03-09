@@ -1,4 +1,4 @@
--- DDL - Data Definition Language
+-- DDL : Data Definition Language
 /* 1. CREATE - creates a table/database
  Syntax : CREATE TABLE table_name(
  				column1 datatype [Constraints], 	[] -> Optional

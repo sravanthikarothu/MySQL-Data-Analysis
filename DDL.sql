@@ -27,10 +27,10 @@ CREATE TABLE departments(
  			);
 
 CASCADE - used in a foreign key constraint to automatically syncs a change (delete or update) from a "parent" table to related "child" tables.
-  1. ON DELETE CASCADE   - If a parent record is deleted, all related child records are also deleted automatically.
-  2. ON UPDATE CASCADE   - If the primary key value in the parent table changes, it automatically updates foreign key value in the child table.
-  3. ON DELETE SET NULL  - If the parent record is deleted, the foreign key in the child table becomes NULL.
-  4. ON DELETE RESTRICT  - Prevents the deletion of a parent row if corresponding child rows exist in another table.
+  1. ON DELETE CASCADE   - When a row in the parent table is deleted, all corresponding rows in the child table that reference it are automatically deleted. 
+  2. ON UPDATE CASCADE   - If the primary key value in the parent table updated, it automatically updates foreign key value in the child table.
+  3. ON DELETE SET NULL  - Sets the child table's foreign key to NULL when the parent row is deleted.
+  4. ON DELETE RESTRICT  - Prevents the parent row from being modified if related child rows exist.
   5. ON DELETE NO ACTION - NO ACTION behaves exactly the same as RESTRICT 
 */ 
 CREATE TABLE employees(
@@ -283,7 +283,7 @@ WHERE table_schema = 'techcorp' AND
 -- To determine if a table has FOREIGN KEY
 /* Syntax : SELECT constraint_name, column_name, referenced_table_name, referenced_column_name
 			FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
-            WHERE table_schema = 'daatabase_name' AND
+            WHERE referenced_table_schema = 'database_name' AND
 				  table-name = 'table_name' AND
                   referenced_table_name IS NOT NULL;
 */

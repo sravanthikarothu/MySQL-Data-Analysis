@@ -37,4 +37,3 @@ WHERE emp_id = 3;
 ROLLBACK to after_first_update;
 COMMIT;
 
-

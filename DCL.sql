@@ -1,4 +1,5 @@
 -- DCL : Data Control Language
+-- DCL commands require admin rights.
 /* 1. GRANT - Used to give permission to the other users to access the database objects.
 Syntax : GRANT privilege_list
 		 ON object_name
@@ -32,5 +33,7 @@ FROM 'john'@'localhost';
 REVOKE ALL PRIVILEGES
 ON techcorp.*
 FROM 'admin_user'@'localhost';
--- Revokes everything from the user on that database.
+-- Removes everything from the user on that database.
+
+
 

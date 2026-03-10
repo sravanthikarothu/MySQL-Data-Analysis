@@ -82,7 +82,7 @@ INSERT INTO order_items
 /* 2. UPDATE - update existing row/record
 Syntax : UPDATE table_name
 		 SET column1 = value1, column2 = value2,------
-         [WHERE CONDITION]
+         [WHERE CONDITION]          	[] -> Optional
 */ 
 UPDATE employees
 SET first_name = 'Abhimaan', last_name = 'Rajput', email = 'abhimaan.rajput@gmail.com'
